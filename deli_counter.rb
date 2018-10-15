@@ -1,6 +1,6 @@
 require 'pry'
 
-class Deli
+# class Deli
 
   @@ticket_number = 0
 
@@ -18,15 +18,15 @@ class Deli
     end 
   end 
   
-  # def take_a_number(line, person)
-  #   puts "Welcome, #{person}. You are number #{line.size+1} in line."
-  #   line.push(person)
-  # end 
-  def take_a_number(line)
-    @@ticket_number += 1
-    puts "Welcome. Your ticket number is #{@@ticket_number}. You are currently number #{line.size+1} in line."
-    line.push(@@ticket_number)
+  def take_a_number(line, person)
+    puts "Welcome, #{person}. You are number #{line.size+1} in line."
+    line.push(person)
   end 
+  # def take_a_number(line)
+  #   @@ticket_number += 1
+  #   puts "Welcome. Your ticket number is #{@@ticket_number}. You are currently number #{line.size+1} in line."
+  #   line.push(@@ticket_number)
+  # end 
   
   def now_serving(line)
     if line.size == 0 
@@ -37,8 +37,8 @@ class Deli
     end 
   end 
 
-end
+# end
 
-myDeli = Deli.new
-myDeli.take_a_number([])
-binding.pry
+# myDeli = Deli.new
+# myDeli.take_a_number([])
+# binding.pry
